@@ -50,7 +50,7 @@ public class Main {
 		 }
 		 
 	    System.out.println("-----");
-	    System.out.println("For K=" + K + " results are:");
+	    System.out.println("For K = " + K + " results are :");
 	    System.out.println("     - Total predictions = " + dataSets.size() + " | good = " + goodPredictions + " | bad = " + (dataSets.size() - goodPredictions));
 	    double accuracy = goodPredictions * 1.0 / dataSets.size();
 	    System.out.println("     - Accuracy = " + accuracy * 100 + "%");
@@ -93,7 +93,7 @@ public class Main {
 		return flowers;
 	}
 	
-	public static List<Flower> getFlowsers() throws IOException{
+	private static List<Flower> getFlowsers() throws IOException{
 		List<Flower> flowsers = new ArrayList();
 		
 	    String data = readFile("iris.data");
@@ -112,7 +112,7 @@ public class Main {
 	    return flowsers;
 	}
 
-	public static String readFile(String filename) throws IOException{
+	private static String readFile(String filename) throws IOException{
 	    String content = null;
 	    File file = new File(filename);
 	    FileReader reader = null;
